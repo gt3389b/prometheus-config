@@ -54,6 +54,10 @@ scrape_configs:
     static_configs:
     - targets: ['collectd:9103']
 
+  - job_name: pushgateway
+    static_configs:
+    - targets: ['pushgateway:9091']
+
   - job_name: alerta
     metrics_path: /api/management/metrics
     static_configs:
